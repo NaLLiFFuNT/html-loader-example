@@ -12,7 +12,15 @@ module.exports = {
             {
                 test: /\.html$/i,
                 use: ['extract-loader', 'html-loader']
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            },
         ]
     }
 };
